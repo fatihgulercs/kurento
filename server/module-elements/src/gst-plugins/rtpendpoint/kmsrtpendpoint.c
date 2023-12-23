@@ -666,7 +666,7 @@ kms_rtp_endpoint_get_media_handler (KmsRtpEndpoint * self, const gchar * media)
   if (self->priv->use_sdes) {
     handler = kms_rtp_endpoint_provide_sdes_handler (self, media);
   } else {
-    handler = KMS_SDP_MEDIA_HANDLER (kms_sdp_rtp_avpf_media_handler_new ());
+    handler = KMS_SDP_MEDIA_HANDLER (kms_sdp_rtp_avp_media_handler_new ());
   }
 
   KMS_ELEMENT_UNLOCK (self);
